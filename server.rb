@@ -49,7 +49,7 @@ end
 post '/new_article' do
 
   #Save articles to redis
-  save_articles(params["url"], [params["title"], params["description"])
+  save_articles(params["url"], params["title"], params["description"])
 
   #Save article to CSV
   # article_for_csv = [params["title"], params["url"], params["description"]]
